@@ -23,7 +23,7 @@ export default function Home() {
     form.append("myFile", file);
     try {
       const response = await fetch("/api/upload", { method: "POST", body: form });
-      const data = await response.json();
+      const { data } = await response.json();
       console.log(data);
       setId(data.id);
       setDownloadPageLink(data.downloadPageLink);
@@ -71,8 +71,11 @@ export default function Home() {
 
           {downloadPageLink && (
             <>
-              <DownloadFile downloadPageLink={downloadPageLink} />
-              <button className="bg-white p-2 mt-3 rounded-lg font-semibold" onClick={handleReset}>
+              <DownloadFile downloadPageLink={downloadPageLink} id={id} />
+              <button
+                className="bg-gray-900 text-white p-2 mt-3 rounded-lg font-semibold"
+                onClick={handleReset}
+              >
                 Upload New File
               </button>
             </>

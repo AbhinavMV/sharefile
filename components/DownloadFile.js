@@ -1,10 +1,10 @@
-function DownloadFile({ downloadPageLink }) {
+import EmailForm from "./EmailForm";
+
+function DownloadFile({ downloadPageLink, id }) {
   return (
     <div className="w-80 break-words mt-2">
       <div className="flex flex-col w-full">
-        <p className="text-center text-gray-300 text-md">
-          alskdjf;asdklhnfouabsfiudablksdbjfblwiebfwoefwaioroiweyrbvoweicrynweioyraawuiperipaernvioetruiyeaiurpebcvuiatywecrui
-        </p>
+        <p className="text-center text-gray-300 text-md">Share the below link.</p>
         <div className="flex bg-gray-600 items-center rounded-md mt-2">
           <p className="break-all text-white py-2 px-1 ">{downloadPageLink}</p>
           <div className="">
@@ -25,6 +25,7 @@ function DownloadFile({ downloadPageLink }) {
             </svg>
           </div>
         </div>
+        <EmailForm id={id} />
       </div>
     </div>
   );

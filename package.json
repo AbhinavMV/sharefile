@@ -12,11 +12,13 @@
     "multer": "^1.4.3",
     "next": "latest",
     "next-connect": "^0.10.2",
+    "nodemailer": "^6.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dropzone": "^11.3.4"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.4",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"

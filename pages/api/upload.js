@@ -22,10 +22,6 @@ const apiRoute = nextConnect({
 apiRoute.use(upload.single("myFile"));
 
 apiRoute.post(async (req, res) => {
-  return res.status(200).json({
-    downloadPageLink: "http://localhost:3000/download/6133b7c06092d5d45c6422e0",
-    id: "6133b7c06092d5d45c6422e0",
-  });
   try {
     if (!req.file) return res.status(400).json({ error: "Please provide a file to upload" });
     let uploadedFile;
