@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import { createEmailTemplate } from "../../helper/emailTemplate";
 import File from "../../lib/models/File";
-import connectDatabase from "../lib/database";
+import connectDatabase from "../../lib/database";
 connectDatabase();
 export default async function handler(req, res) {
   if (req.method === "POST") {
@@ -54,3 +54,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: `Method ${req.method} not allowed` });
   }
 }
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};

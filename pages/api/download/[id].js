@@ -1,6 +1,6 @@
 import https from "https";
 import File from "../../../lib/models/File";
-import connectDatabase from "../lib/database";
+import connectDatabase from "../../../lib/database";
 connectDatabase();
 export default async function handler(req, res) {
   const { id } = req.query;
