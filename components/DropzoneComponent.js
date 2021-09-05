@@ -1,9 +1,10 @@
 import { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 
-function DropzoneComponent({ setFile }) {
+function DropzoneComponent({ setFile, setUploadState }) {
   const onDrop = useCallback((acceptedFiles) => {
     setFile(acceptedFiles[0]);
+    setUploadState("Upload");
   }, []);
 
   const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({

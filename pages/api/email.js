@@ -1,7 +1,8 @@
 import nodemailer from "nodemailer";
 import { createEmailTemplate } from "../../helper/emailTemplate";
 import File from "../../lib/models/File";
-
+import connectDatabase from "../lib/database";
+connectDatabase();
 export default async function handler(req, res) {
   if (req.method === "POST") {
     try {

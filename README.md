@@ -1,3 +1,3 @@
 # File Share App
 
-#### Built using nextjs only
+#### Built frontend and backend using nextjs only

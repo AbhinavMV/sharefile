@@ -42,7 +42,9 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-4xl mb-2 text-white">Want to share a file?</h1>
         <div className={`bg-gray-700 rounded-xl shadow-lg ${downloadPageLink && "px-3 py-4"}`}>
-          {!downloadPageLink && <DropzoneComponent setFile={setFile} />}
+          {!downloadPageLink && (
+            <DropzoneComponent setFile={setFile} setUploadState={setUploadState} />
+          )}
           {file && (
             <>
               <RenderFile file={{ type: file.type, name: file.name, size: file.size }} />
